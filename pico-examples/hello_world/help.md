@@ -182,3 +182,30 @@ That makes it appear as `/dev/ttyACM0`.
 
 
 
+
+**USB vs UART – Side by Side**
+
+| Feature                | **USB (Universal Serial Bus)**                   | **UART (Universal Asynchronous Receiver Transmitter)** |
+| ---------------------- | ------------------------------------------------ | ------------------------------------------------------ |
+| **Type**               | Standard communication **protocol**              | **Hardware interface** for serial communication        |
+| **Signal Lines**       | Uses 4 lines – VBUS, D+, D–, GND                 | Uses 2 lines – TX (transmit), RX (receive)             |
+| **Communication**      | **Complex, packet-based**, supports many devices | **Simple**, byte-by-byte serial transfer               |
+| **Speed**              | High (up to Gbps)                                | Low (up to few Mbps)                                   |
+| **Distance**           | Short (≈5m typical)                              | Longer (up to 15m or more depending on baud rate)      |
+| **Device Roles**       | Host ↔ Device (PC ↔ Mouse, Keyboard, etc.)       | Point-to-point (MCU ↔ MCU, MCU ↔ Sensor)               |
+| **Connector**          | USB Type-A, Type-C, etc.                         | No standard connector (just pins)                      |
+| **Voltage Levels**     | 5V or 3.3V differential signaling                | 3.3V / 5V single-ended                                 |
+| **Driver Requirement** | Needs OS driver                                  | No driver needed (direct MCU communication)            |
+| **Example Devices**    | Pendrive, webcam, Arduino (USB upload)           | GPS module, GSM modem, MCU serial debug                |
+
+**Example Use:**
+
+* **USB:** PC ↔ Arduino (code upload via USB cable)
+* **UART:** Arduino ↔ GPS module (data exchange via TX/RX pins)
+
+👉 In short:
+USB = advanced, plug-and-play PC connection.
+UART = simple, direct chip-to-chip serial link.
+
+
+
