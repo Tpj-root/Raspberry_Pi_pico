@@ -266,3 +266,24 @@ Device Information
 
 Metadata Blocks
 
+
+
+
+
+If the file includes metadata (like example_auto_set_url()), you’ll see something like:
+
+
+where@slave:~/pico/pico-examples/build/adc/adc_console$ picotool info adc_console.uf2
+File adc_console.uf2 family ID 'rp2040':
+
+Program Information
+ name:          adc_console
+ web site:      https://github.com/raspberrypi/pico-examples/tree/HEAD/adc/adc_console
+ features:      UART stdin / stdout
+ binary start:  0x10000000
+ binary end:    0x10004fbc
+where@slave:~/pico/pico-examples/build/adc/adc_console$ 
+
+
+
+
